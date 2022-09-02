@@ -1,0 +1,46 @@
+h1.title {
+    font-size: 60px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    width: 450px;
+    margin: 30px auto 30px auto;
+}
+
+section {
+    border: 1px solid #f5f5f5;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 30px auto 30px auto;
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+    background-color: #c0d1cc;
+}
+
+section div.image {
+    position: relative;
+    right: 160px;
+    top: 50px;
+}
+
+section div.info {
+    position: relative;
+    left: 300px;
+    bottom: 270px;
+}
+
+div.button {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    font-size: 25px;
+    width: 220px;
+    height: 80px;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 25px;
+}

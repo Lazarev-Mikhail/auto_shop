@@ -1,0 +1,5 @@
+*.pyc
+__pycache__
+myvenv
+db.sqllite3
+.DS_Store

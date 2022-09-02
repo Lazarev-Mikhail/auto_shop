@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'catalog/css/show_brend_car.css' %}">
+{% endblock %}
+
+{% block title %} Каталог {% endblock %}
+{% block content %}
+    <h1 class="main"> Автомобили {{brend.name}} </h1>
+    <div class="logo"><img src="{{brend.image.url}}" alt="" height="400" width="600"></div>
+    <section>
+        {% for auto in autos %}
+            <article>
+                <header>
+                     <h1><a href="{{ auto.get_url }}">{{auto.name}}</a></h1>
+                </header>
+                <section class="image">
+                    <div><img src="{{auto.image.url}}" alt="" height="400" width="600"></div>
+                </section>
+                <section class="info">
+                    <div>
+                        <h2>Год выпуска - {{auto.year}} г.</h2>
+                        <h2>Цена - {{auto.price| default:'неизвестена'}} р.</h2>
+                        <h2>Пробег - {{auto.mileage}} км.</h2>
+                    </div>
+                </section>
+            </article>
+        {% endfor %}
+    </section>
+<!--Фильтр по цене-->
+    <div class="cost">
+        <form id="1" action="" method="get">
+            <label for="1"> Фильтр по стоимости </label>
+            {{ form.as_p }}
+            <input type="submit" value="Поиск">
+        </form>
+    </div>
+
+{% endblock %}

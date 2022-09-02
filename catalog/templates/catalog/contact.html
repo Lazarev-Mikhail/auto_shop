@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'catalog/css/contact.css' %}">
+{% endblock %}
+
+{% block title %} Контакты {% endblock %}
+{% block content %}
+    <h1 class="contact">Автосалон Fakeshop</h1>
+    <section>
+<!--Карта через API яндекса-->
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acbcfcf91dba1e22899e85384799cc75e51a26cb70674695d74a27b65102c2e75&amp;width=600&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <div class="info">
+            <h2 class="field">Адрес</h2>
+            <h2 class="description">Воронеж, ул. Изыскателей, 29</h2>
+            <h2 class="field">Часы работы:</h2>
+            <h2 class="description">Пн-Пт: 9:00-18:00</h2>
+            <h2 class="description">Сб-Вс: выходные</h2>
+            <h2 class="field">Телефон:</h2>
+            <h2 class="description"><em>8-999-999-99-99</em></h2>
+            <h2 class="field">E-mail:</h2>
+            <h2 class="description"><em>fackshop@mail.ru</em></h2>
+        </div>
+    </section>
+
+{% endblock %}

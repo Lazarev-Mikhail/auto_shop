@@ -1,0 +1,22 @@
+body{
+        font-family: sans-serif;
+}
+
+h2 {
+    color: #3b4544;
+    border-bottom: 3px solid black;
+}
+
+section.soon {
+    border: 30px 30px 30px 30px;
+    border: 1px solid;
+    height: 500px;
+    width: 650px;
+    margin: 30px auto 30px auto;
+    text-align: center;
+    background-color: #fff382;
+}
+
+section.description {
+    background-color: #b6d6cc;
+}

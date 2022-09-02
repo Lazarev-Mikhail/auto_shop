@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'catalog/css/brends.css' %}">
+{% endblock %}
+
+{% block title %} Марки автомобилей {% endblock %}
+{% block content %}
+    <section>
+       <h2> Марки в наличии </h2>
+        <article>
+            {% for brend in brends %}
+                <a href="{% url 'brend_car' brend.name %}"><h1>{{brend.name}}</h1></a>
+                <div><img src="{{brend.image.url}}" alt="" height="200" width="300"></div>
+                {% endfor %}
+        </article>
+    </section>
+
+
+{% endblock %}

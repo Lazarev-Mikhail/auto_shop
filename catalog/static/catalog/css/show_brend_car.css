@@ -1,0 +1,68 @@
+h1.main {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    width: 450px;
+    margin: 30px auto 30px auto;
+}
+
+section article {
+    border: 1px solid #f5f5f5;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 30px auto 30px auto;
+    width: 1000px;
+    text-align: center;
+    background-color: #c0d1cc;
+
+}
+
+section article header {
+    background-color: #7e8281;
+    border-bottom: ridge black 1px;
+    margin-bottom: 10px;
+}
+
+section article header h1 {
+    font-size: 50px;
+    position: relative;
+    top: 20px;
+}
+
+section article header h1 a {
+    color: #e3e3e3;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+section article section.image div {
+    position: relative;
+    right: 180px;
+}
+
+section article section.info {
+    margin: 0px;
+    padding: 0px;
+    height: 0px;
+}
+
+section article section.info div {
+    position: relative;
+    left: 300px;
+    bottom: 250px;
+}
+
+div.logo{
+    text-align: center;
+}
+
+div.cost {
+    position: fixed;
+    top: 170px;
+    right: 30px;
+    width: 170px;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+}

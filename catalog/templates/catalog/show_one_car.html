@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'catalog/css/show_one_car.css' %}">
+{% endblock %}
+
+{% block title %} {{ auto.name }} {% endblock %}
+
+{% block content %}
+
+    <h1 class="title">{{auto.name}}</h1>
+    <section>
+        <div class="image">
+            <img src="{{auto.image.url}}" alt="" height="400" width="600">
+        </div>
+        <div class="info">
+            <h2>Год выпуска - {{auto.year}} г.</h2>
+            <h2>Цена - {{auto.price| default:'неизвестена'}} р.</h2>
+            <h2>Пробег - {{auto.mileage}} км.</h2>
+            <h2>Цвет - {{ auto.get_color_display }}</h2>
+            <h2>Число владельцев - {{ auto.owners }}</h2>
+        </div>
+    </section>
+
+    <div class="button">
+        <a href="{% url 'contact' %}">
+            <button>Узнать подробности</button>
+        </a>
+    </div>
+{% endblock %}
+
