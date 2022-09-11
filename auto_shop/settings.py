@@ -131,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = BASE_DIR / 'uploads'  # Куда сохраняется
 
 MEDIA_URL = '/gallery_auto/'  # откуда извлекается
+
+try:
+    from .local_settings import *
+except ImportError:
+    from .prod_settings import *

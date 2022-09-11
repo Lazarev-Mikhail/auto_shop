@@ -3,3 +3,4 @@ __pycache__
 myvenv
 db.sqllite3
 .DS_Store
+local_settings.py
