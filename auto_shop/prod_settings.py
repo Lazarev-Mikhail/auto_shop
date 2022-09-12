@@ -6,7 +6,7 @@ SECRET_KEY = 'django-gbbhs345-3nvdmq-)l39*fw8342t%nc(@x(-i4y6)nd^)pb-d2#^6g9+@gy
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['mikhaillazarev.pythonanywhere.com', 'localhost']
 
 DATABASES = {
     'default': {
@@ -20,4 +20,4 @@ STATICFILES_DIRS = [
     BASE_DIR / 'catalog/static',
 ]
 
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'assets'
