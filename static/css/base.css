@@ -3,6 +3,11 @@ html {
     width: 1300px;
 }
 
+body {
+    margin-left: auto;
+    margin_right: auto;
+}
+
 header {
     background-color: #22565e;
     height: 110px;

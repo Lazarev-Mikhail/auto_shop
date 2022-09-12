@@ -21,7 +21,15 @@
             <h2>Цвет - {{ auto.get_color_display }}</h2>
             <h2>Число владельцев - {{ auto.owners }}</h2>
         </div>
+
     </section>
+    <div class="gallery">
+        <p>
+            {% for picture in gallery %}
+            <img src="{{picture.image.url}}" alt="" height="300" width="450">
+            {% endfor %}
+        </p>
+    </div>
 
     <div class="button">
         <a href="{% url 'contact' %}">

@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Auto, Brend
+from .models import Auto, Brend, Gallery_of_one_car
 from django.db.models import QuerySet
 
 
@@ -30,6 +30,11 @@ class PriceFilter(admin.SimpleListFilter):
             return queryset.filter(price__gte=4000000)
 
 
+class Gallery_of_one_car_Inline(admin.TabularInline):
+    fk_name = 'auto'
+    model = Gallery_of_one_car
+
+
 @admin.register(Auto)  # привязка при помощи декоратора
 class AutoAdmin(admin.ModelAdmin):
     list_display = ['name', 'year', 'brend', 'price']
@@ -39,6 +44,7 @@ class AutoAdmin(admin.ModelAdmin):
     search_fields = ['name__startwith']
     list_filter = [PriceFilter]
     prepopulated_fields = {'slug_auto': ('name',)}
+    inlines = [Gallery_of_one_car_Inline, ]
 
 
 @admin.register(Brend)

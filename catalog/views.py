@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Auto, Brend
+from .models import Auto, Brend, Gallery_of_one_car
 from django.views.generic import ListView
 from django.views.generic.base import TemplateView
 from .forms import AutoCostFilterForm
@@ -30,7 +30,11 @@ def show_all_cars(request):
 
 def show_one_auto(request, slug_auto: str):
     auto = get_object_or_404(Auto, slug_auto=slug_auto)
-    return render(request, 'catalog/show_one_car.html', context={'auto': auto})
+    gallery = Gallery_of_one_car.objects.all()
+    return render(request, 'catalog/show_one_car.html', context={
+        'auto': auto,
+        'gallery': gallery,
+    })
 
 
 class ListBrend(ListView):

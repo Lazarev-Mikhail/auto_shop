@@ -6,7 +6,7 @@ SECRET_KEY = 'django-gbbhs345-3nvdmq-)l39*fw8342t%nc(@x(-i4y6)nd^)pb-d2#^6g9+@gy
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['mikhaillazarev.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['mikhaillazarev.pythonanywhere.com']
 
 DATABASES = {
     'default': {

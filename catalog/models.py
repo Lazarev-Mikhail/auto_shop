@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.utils.text import slugify
 from django.urls import reverse
 
 
@@ -43,3 +42,8 @@ class Auto(models.Model):
 
     def __str__(self):
         return f'{self.name}-{self.year}'
+
+
+class Gallery_of_one_car(models.Model):
+    image = models.FileField(upload_to='gallery_auto', default='defoalt_image.jpg')
+    auto = models.ForeignKey(Auto, on_delete=models.CASCADE, null=True, related_name='images')

@@ -31,6 +31,22 @@ section div.info {
     bottom: 270px;
 }
 
+div.gallery {
+    background: #666;
+    border: 1px solid #55c5e9;
+    width: 1000px;
+    text-align: center;
+    margin: 30px auto 30px auto;
+}
+
+div.gallery p img {
+    border: 1px solid #55c5e9;
+    padding: 5px;
+    background: #666;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 div.button {
     text-align: center;
     margin: 20px;
